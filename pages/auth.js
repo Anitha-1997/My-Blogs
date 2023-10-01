@@ -1,10 +1,9 @@
-import { getSession, useSession } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import AuthForm from "../components/auth/auth-form";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 function AuthPage() {
-  const { data: session, status } = useSession();
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
